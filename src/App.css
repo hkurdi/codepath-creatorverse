@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.landing-page {
+  @apply flex flex-col items-center justify-center min-h-screen bg-cover bg-center text-white;
+  background-image: url("/path/to/your/background-image.jpg"); /* Add your background image path */
+}
+
+.landing-page h1 {
+  @apply text-4xl md:text-6xl font-bold mb-8;
+}
+
+.landing-page .button-group {
+  @apply flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4;
+}
+
+.landing-page .button {
+  @apply bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700;
+}
+
+.container {
+  @apply max-w-md md:max-w-2xl mx-auto p-4;
+}
+
+form {
+  @apply flex flex-col space-y-4;
+}
+
+form label {
+  @apply flex flex-col space-y-1;
+}
+
+form input,
+form textarea {
+  @apply border border-gray-300 p-2 rounded;
+}
+
+form button {
+  @apply bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700;
+}
+
+ul {
+  @apply list-disc pl-5 space-y-2;
+}
+
+ul li {
+  @apply text-blue-500 hover:text-blue-700;
+}
+
+@layer utilities {
+  .h-screen-hero {
+    height: 73vh;
+  }
+  .h-screen-hero-view-creator {
+    height: 40vh;
+  }
+}
+
+/* normal custom button */
+
+.button-custom {
+  @apply bg-gradient-to-r from-blue-600 via-blue-800 to-blue-700 text-white py-2 px-6 rounded-full w-64 h-16;
+  position: relative;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button-custom span {
+  @apply text-xl lowercase tracking-wider text-nowrap font-normal;
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: color 0.2s ease-in-out;
+}
+
+.button-custom::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.button-custom:hover::before {
+  opacity: 1;
+}
+
+.button-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button-custom:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* delete button */
+
+
+.button-delete {
+  @apply bg-gradient-to-r from-red-600 via-red-800 to-red-700 text-white py-2 px-6 rounded-full w-64 h-16;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button-delete span {
+  @apply lowercase tracking-wider font-normal text-base;
+  position: relative;
+  z-index: 1;
+  transition: color 0.2s ease-in-out;
+}
+
+.button-delete::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.button-delete:hover::before {
+  opacity: 1;
+}
+
+.button-delete:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button-delete:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Edit button */
+
+.button-edit {
+  @apply bg-gradient-to-r from-orange-600 via-orange-800 to-orange-700 text-white py-2 px-6 rounded-full w-64 h-16;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button-edit span {
+  @apply lowercase tracking-wider font-normal text-base;
+  position: relative;
+  z-index: 1;
+  transition: color 0.2s ease-in-out;
+}
+
+.button-edit::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.button-edit:hover::before {
+  opacity: 1;
+}
+
+.button-edit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button-edit:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* submit button */
+
+.button-submit {
+  @apply bg-gradient-to-r from-indigo-600 via-indigo-800 to-indigo-700 text-white py-2 px-6 rounded-full w-64 h-16;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button-submit span {
+  @apply lowercase tracking-wider font-normal;
+  position: relative;
+  z-index: 1;
+  transition: color 0.2s ease-in-out;
+}
+
+.button-submit::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.button-submit:hover::before {
+  opacity: 1;
+}
+
+.button-submit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button-submit:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* creator details */
+
+.creator-details-bg {
+  background: linear-gradient(109.6deg, rgba(14, 14, 14, 0.93) 11.2%, rgb(12, 12, 12), rgb(12, 12, 12) 198.9%);
+}
+
+
+/* ensuring edit and delete same size */
+
+.button-same-size {
+  width: 60%;
+  height: 2.5rem; /* Equivalent to h-10 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
