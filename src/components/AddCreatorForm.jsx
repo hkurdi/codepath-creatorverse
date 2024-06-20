@@ -17,7 +17,7 @@ export const AddCreatorForm = () => {
 
   async function addCreator() {
     try {
-      const { data, error } = await supabase.from("contentcreators").insert([
+      const { data, error } = await supabase.from("creators").insert([
         {
           name,
           image_url: imageURL,
