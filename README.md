@@ -1,4 +1,4 @@
-# WEB103 Prework - *Creatorverse *
+# WEB103 Prework - *Creatorverse*
 
 Submitted by: **Hamza Luay Kurdi (@hkurdi on github)**
 
