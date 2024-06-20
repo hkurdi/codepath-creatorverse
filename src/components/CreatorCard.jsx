@@ -24,7 +24,7 @@ export function CreatorCard({ creator }) {
   };
 
   return (
-    <Card className="w-96 h-[500px] bg-gray-900 text-white relative">
+    <Card className="w-[400px] lg:w-[400px] md:w-[310px] sm:w-80 h-[500px] bg-gray-900 text-white relative">
       <div>
         <Tooltip content="Info" placement="top">
           <button
