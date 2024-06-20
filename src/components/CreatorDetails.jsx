@@ -30,7 +30,7 @@ export const CreatorDetails = () => {
     if (result.isConfirmed) {
       try {
         const { error } = await supabase
-          .from("contentcreators")
+          .from("creators")
           .delete()
           .eq("id", creator.id);
         if (error) {
@@ -52,7 +52,7 @@ export const CreatorDetails = () => {
   useEffect(() => {
     const fetchCreator = async () => {
       const { data, error } = await supabase
-        .from("contentcreators")
+        .from("creators")
         .select("*")
         .eq("id", id)
         .single();

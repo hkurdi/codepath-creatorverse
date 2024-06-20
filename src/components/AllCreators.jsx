@@ -9,7 +9,7 @@ export const AllCreators = () => {
   async function getCreators() {
     try {
       const { data, error } = await supabase
-        .from("contentcreators")
+        .from("creators")
         .select("*");
       if (error) throw error;
       if (data != null) {

@@ -23,7 +23,7 @@ export const EditCreatorForm = () => {
   useEffect(() => {
     const fetchCreator = async () => {
       const { data, error } = await supabase
-        .from("contentcreators")
+        .from("creators")
         .select("*")
         .eq("id", id)
         .single();
@@ -61,7 +61,7 @@ export const EditCreatorForm = () => {
 
     if (result.isConfirmed) {
       const { error } = await supabase
-        .from("contentcreators")
+        .from("creators")
         .update({
           name,
           image_url: imageURL,
