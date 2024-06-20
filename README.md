@@ -29,7 +29,8 @@ The following **additional** features are implemented:
 
 - [x] TailwindCSS to style elements.
 - [x] SweetAlert2 (Swal2) for alerts (For example: "Are you sure you want to delete this content creator?").
-- [x] 404 Page.
+- [x] (NOT A FEAUTURE, But) Deployed project on vercel.
+
 
 ## Video Walkthrough
 
