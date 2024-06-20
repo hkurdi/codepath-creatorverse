@@ -11,7 +11,7 @@ export const AllCreators = () => {
       const response = await axios.get(import.meta.env.VITE_SUPABASE_URL, {
         headers: {
           apikey: import.meta.env.VITE_SUPABASE_API_KEY,
-          Authorization: import.meta.env.VITE_SUPABASE_API_KEY,
+          Authorization: import.meta.env.VITE_SUPABASE_JWT,
         },
       });
       const data = response.data;
